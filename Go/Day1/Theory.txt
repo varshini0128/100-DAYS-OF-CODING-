@@ -1,0 +1,246 @@
+🗓️ Day 1 of 100 — Introduction to Go (Golang) from Scratch
+🧠 1. What is Go (Golang)?
+
+Go, also known as Golang, is an open-source programming language created at Google in 2009 by Robert Griesemer, Rob Pike, and Ken Thompson (the same people who helped design Unix, UTF-8, and C).
+
+Go was designed to solve real problems Google faced:
+
+Very large-scale systems
+
+Too much build time
+
+Poor dependency management
+
+Lack of concurrency support in existing languages
+
+✳️ So, Go’s main goals were:
+
+Speed (compiled like C)
+
+Simplicity (easy to learn like Python)
+
+Concurrency (can run many tasks at once)
+
+Efficiency (uses memory smartly)
+
+Safety (strongly typed and secure)
+
+⚙️ 2. Why was Go created?
+
+At Google, developers were frustrated because:
+
+C++ was fast but complex.
+
+Python was simple but slow.
+
+So they combined the best of both:
+🧩 Go is simple like Python, but fast like C.
+
+💼 3. Features of Go
+Feature	Explanation
+Compiled Language	Converts code directly into machine code, giving speed and efficiency.
+Statically Typed	You must define variable types; helps catch errors early.
+Garbage Collection	Automatically manages memory (like Java, Python).
+Concurrency	Handles multiple tasks simultaneously using “goroutines.”
+Standard Library	Comes with powerful built-in packages for I/O, web servers, cryptography, etc.
+Cross-Platform	Runs on Windows, macOS, and Linux.
+Simple Syntax	Designed to be readable and clean.
+🌍 4. Who Uses Go?
+
+Go is used by many global companies, including:
+
+Google – internal systems and servers
+
+Uber – for high-performance services
+
+Netflix – backend tools
+
+Dropbox – moved from Python to Go
+
+Docker & Kubernetes – completely written in Go
+
+Twitch, SoundCloud, Cloudflare, and many more
+
+Go is extremely popular in cloud computing, backend systems, and DevOps.
+
+🧩 5. Go Architecture Overview
+
+When you write a Go program:
+
+You write source code (.go file).
+
+Go compiler (go build) compiles it into machine code.
+
+The compiled file can be executed directly — no virtual machine or interpreter needed.
+
+🧱 That’s why Go is fast like C, but still feels simple like Python.
+
+🧠 6. Important Go Concepts You’ll Learn in Coming Days
+Concept	Description
+Variables & Constants	How data is stored and managed.
+Data Types	int, float, string, bool, etc.
+Operators & Conditions	if-else, switch, logical operators.
+Loops	for loops, range loops.
+Functions	reusable blocks of code.
+Arrays & Slices	managing lists of data.
+Maps	storing key-value pairs.
+Structs	user-defined data types (like objects).
+Interfaces	define behavior for types.
+Goroutines	lightweight threads for concurrency.
+Channels	communication between goroutines.
+Packages	organizing code.
+Error Handling	Go’s unique way of managing runtime errors.
+📁 7. Go Folder Structure
+
+When you install Go, it sets up a workspace.
+By default, Go expects files in a structure like this:
+
+C:\Users\Varshini\go\
+│
+├── bin\        → Compiled executable files
+├── pkg\        → Compiled package files
+└── src\        → Source code (.go files)
+
+
+Your projects usually go inside the src folder.
+
+Example:
+
+C:\Users\Varshini\go\src\day1_hello
+    └── hello.go
+
+🧩 8. Go Program Structure (Detailed)
+
+Every Go program follows this format:
+
+package main     // 1️⃣ defines the package name
+
+import "fmt"     // 2️⃣ imports standard library package for printing
+
+func main() {    // 3️⃣ main() function is the entry point
+    fmt.Println("Hello, World!")
+}
+
+📖 Explanation:
+Line	Meaning
+package main	A Go program must belong to a package. main is special — it means “start execution here.”
+import "fmt"	Imports the formatting package (used for printing, input/output).
+func main()	Declares the main function — Go starts execution here.
+fmt.Println()	Prints text to the terminal followed by a newline.
+⚡ 9. How to Run a Go Program
+Method 1: Run directly
+go run hello.go
+
+
+This compiles and executes the program immediately.
+
+Method 2: Build and run
+go build hello.go
+
+
+This creates an executable file (hello.exe on Windows).
+Run it by typing:
+
+./hello
+
+
+✅ Advantage: You can share or deploy this executable anywhere — no need for Go to be installed.
+
+💡 10. How Go Code Executes (Step-by-Step)
+
+You write a .go file (source code).
+
+Go compiler translates it to machine code.
+
+Go linker links all packages and libraries.
+
+Binary executable file is generated.
+
+Operating system executes the binary directly.
+
+This is why Go is known for speed — it skips interpretation and runs natively.
+
+🧩 11. Example Program (Full)
+package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Welcome to Go Programming!")
+    fmt.Println("Developed by Google.")
+    fmt.Println("Simple, Fast, and Powerful 🚀")
+}
+
+Output:
+Welcome to Go Programming!
+Developed by Google.
+Simple, Fast, and Powerful 🚀
+
+🔍 12. Key Points to Remember (Day 1)
+
+Go file extension is .go
+
+Every Go program must have:
+
+a package declaration
+
+a main() function (for executable programs)
+
+fmt.Println() prints output with a newline
+
+Go is case-sensitive
+
+Indentation doesn’t define blocks (like Python) — instead, {} are used
+
+Statements inside {} must be properly formatted (Go enforces clean style)
+
+🏁 13. Day 1 Practice Tasks
+
+✅ Create 3 separate .go files and try the following:
+
+🧩 Program 1: Print your name
+package main
+import "fmt"
+
+func main() {
+    fmt.Println("My name is Varshini Siliveri.")
+}
+
+🧩 Program 2: Print today’s date and message
+package main
+import "fmt"
+
+func main() {
+    fmt.Println("Date: 3 November 2025")
+    fmt.Println("Day 1 of 100 Days of GoLang 💪")
+}
+
+🧩 Program 3: Motivational Lines
+package main
+import "fmt"
+
+func main() {
+    fmt.Println("Learning Go step by step!")
+    fmt.Println("Consistency builds mastery.")
+    fmt.Println("100 days, 100 lessons, 1 new skill 🚀")
+}
+
+📘 14. Real-Life Analogy (To Remember Easily)
+
+Think of Go like building a house:
+
+House Term	               Go Equivalent	           Meaning
+Blueprint	               package main         	Defines the structure
+Toolbox	                   import "fmt"	            Imports tools (libraries)
+Main door	               func main()	            Entry point of the program
+Worker                     fmt.Println()	        Executes tasks (prints text)
+
+
+🧩 15. Summary of Day 1
+Concept	Description
+What is Go	Fast, simple, compiled language by Google
+Features	Concurrent, garbage-collected, cross-platform
+Program Structure	package → import → main function
+Execution	go run and go build
+Syntax	Clean, consistent, and readable
+Focus	Speed, simplicity, safety
