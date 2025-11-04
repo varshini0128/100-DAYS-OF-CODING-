@@ -28,7 +28,7 @@ for i in range(1,5):
 
 # 5. Find the smallest number in a list.
 list1=[22,33,44,33,4,32,56,679]
-smallest=23
+smallest=list1[0]
 for num in list1:
     if smallest>num:
         smallest=num
@@ -40,7 +40,7 @@ list5=['1','2','3','4','5']
 rev_list=[]
 i=len(list5)-1
 for j in range(len(list5)):
-    rev_list.extend(list5[i])
+    rev_list.append(list5[i])
     i-=1
 print(rev_list)
 
@@ -51,18 +51,18 @@ odd_count=0
 list2=[1,2,3,4,5,6,7,8,9,10]
 for i in list2:
     if i%2==0:
-        even_count+=i
+        even_count+=1
     else:
-        odd_count+=i
+        odd_count+=1
 print(even_count,'odd')
 print(odd_count)
 
 
 # # 8. Find the sum of all elements in a list.
-sum=0
+sum_val=0
 for i in list2:
-    sum+=i
-print(sum)
+    sum_val+=i
+print(sum_val)
 
 
 # # 9. Write a program to check if a number is prime.
@@ -90,9 +90,9 @@ b=int(input('enter a number: '))
 c=int(input('enter a number: '))
 if a > b and a > c:
     print('a is greatest')
-if b > a and b > c:
+elif b > a and b > c:
     print('a is greatest')
-if c > b and c > a:
+elif c > b and c > a:
     print('a is greatest')
 # # 11. Display all pairs of elements from a list (O(n²) approach).
 # Create a list
@@ -109,7 +109,7 @@ for i in range(len(numbers)):
 
 
 # # 12. Write a program that prints the factorial of a given number.
-fact=0
+fact=1
 num3=int(input("Enter a number to find factorial: "))
 for i in range(1,num3+1):
     fact*=i
@@ -183,7 +183,8 @@ for num in numbers:
 
 
 # 15. Write a program that calculates the average of numbers in a list.
-
+sum_v=0
 for i in list2:
-    avg=sum/len(list2)
+    sum_v+=i
+avg=sum_v/len(list2)
 print(avg)
