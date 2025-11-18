@@ -90,6 +90,7 @@ Goroutines	lightweight threads for concurrency.
 Channels	communication between goroutines.
 Packages	organizing code.
 Error Handling	Go’s unique way of managing runtime errors.
+
 📁 7. Go Folder Structure
 
 When you install Go, it sets up a workspace.
@@ -125,7 +126,7 @@ func main() {    // 3️⃣ main() function is the entry point
 Line	Meaning
 package main	A Go program must belong to a package. main is special — it means “start execution here.”
 import "fmt"	Imports the formatting package (used for printing, input/output).
-func main()	Declares the main function — Go starts execution here.
+func main() 	Declares the main function — Go starts execution here.
 fmt.Println()	Prints text to the terminal followed by a newline.
 ⚡ 9. How to Run a Go Program
 Method 1: Run directly
@@ -167,8 +168,8 @@ import "fmt"
 
 func main() {
     fmt.Println("Welcome to Go Programming!")
-    fmt.Println("Developed by Google.")
-    fmt.Println("Simple, Fast, and Powerful 🚀")
+    fmt.Println("Developed by Google.") fmt.Println("Simple, Fast, and Powerful 🚀")
+    
 }
 
 Output:
